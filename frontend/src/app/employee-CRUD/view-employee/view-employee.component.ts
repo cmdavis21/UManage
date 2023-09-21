@@ -1,12 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Employee } from '../employee';
-import { AuthenticationService } from 'src/app/auth-service/authentication.service';
+import { AuthenticationService } from '../../auth-service/auth-service.service';
 
 @Component({
   selector: 'app-view-employee',
   templateUrl: './view-employee.component.html',
-  styleUrls: ['./view-employee.component.css']
+  styleUrls: ['./view-employee.component.scss']
 })
 export class ViewEmployeeComponent implements OnInit {
 

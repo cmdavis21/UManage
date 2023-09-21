@@ -1,11 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { AuthenticationService } from 'src/app/auth-service/authentication.service';
+import { AuthenticationService } from '../../auth-service/auth-service.service';
 
 @Component({
   selector: 'app-delete-employee',
   templateUrl: './delete-employee.component.html',
-  styleUrls: ['./delete-employee.component.css']
+  styleUrls: ['./delete-employee.component.scss']
 })
 export class DeleteEmployeeComponent {
 
@@ -28,7 +28,7 @@ export class DeleteEmployeeComponent {
       }, (error) => {
         console.error("Error deleting employee", error);
         this.success = null;
-        this.error = "Error deleting employee. Please try again."
+        // this.error = "Error deleting employee. Please try again."
       }
     )
   }

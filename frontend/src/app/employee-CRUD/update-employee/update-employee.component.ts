@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router, ActivatedRoute } from '@angular/router';
-import { AuthenticationService } from 'src/app/auth-service/authentication.service';
+import { AuthenticationService } from '../../auth-service/auth-service.service';
 
 @Component({
   selector: 'app-update-employee',
   templateUrl: './update-employee.component.html',
-  styleUrls: ['./update-employee.component.css']
+  styleUrls: ['./update-employee.component.scss']
 })
 export class UpdateEmployeeComponent {
 
