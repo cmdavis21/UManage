@@ -1,0 +1,43 @@
+<div class="view-employee-field">
+  <div class="field-title">
+    <i class="fa-solid fa-people-group"></i>
+    <h3>Current Employees</h3>
+  </div>
+  <hr>
+  <div class="search-employee">
+    <div class="search-bar">
+      <input type="text" class="form-control" id="searchQuery" [(ngModel)]="searchQuery" placeholder="Search by name or id">
+      <button (click)="searchEmployees()" class="btn btn-primary">Search</button>
+    </div>
+
+    <div class="search-results">
+      <ng-container *ngIf="foundEmployees">
+        <div *ngFor="let employee of foundEmployees" class="search-result-item">
+          <p>ID: {{ employee.id }}</p>
+          <p>{{ employee.name }}</p>
+          <p>Phone: {{ employee.phoneNumber }}</p>
+          <p>Supervisors: {{ employee.supervisors }}</p>
+        </div>
+      </ng-container>
+      <!-- <ng-template #loadingTemplate>
+          <p>Finding employees...</p>
+      </ng-template> -->
+    </div>
+  </div>
+  <div class="view-employee">
+    <ng-container *ngIf="employeeList">
+      <div *ngFor="let employee of employeeList" class="employee-item">
+        <p>ID: {{ employee.id }}</p>
+        <p>{{ employee.name }}</p>
+        <p>Phone: {{ employee.phoneNumber }}</p>
+        <p>Supervisors: {{ employee.supervisors }}</p>
+      </div>
+    </ng-container>
+    <!-- <ng-template #loadingTemplate>
+        <p>Loading employee data...</p>
+    </ng-template> -->
+  </div>
+  <div class="message_box">
+    <div *ngIf="error" class="alert alert-danger">{{ error }}</div>
+  </div>
+</div>

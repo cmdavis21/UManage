@@ -1,0 +1,22 @@
+<div class="form__field">
+  <div class="message_box">
+    <div *ngIf="success" class="alert alert-success">{{ success }}</div>
+    <div *ngIf="error" class="alert alert-danger">{{ error }}</div>
+  </div>
+
+  <form (submit)="onLogin()" autocomplete="off">
+    <div class="input__field">
+      <label for="username" class="form-label">Username</label>
+      <div>
+        <input type="text" class="form-control" name="username" autocomplete="off" [(ngModel)]="username">
+      </div>
+    </div>
+    <div class="input__field">
+      <label for="password" class="form-label">Password</label>
+      <div>
+        <input type="password" class="form-control" name="password" autocomplete="off" [(ngModel)]="password">
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary login__button">Login</button>
+  </form>
+</div>

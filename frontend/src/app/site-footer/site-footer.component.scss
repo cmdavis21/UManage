@@ -1,0 +1,15 @@
+footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    padding: 3rem 2rem;
+    border-radius: 0 150px 0 0;
+    background-color: var(--purple);
+}
+
+p {
+    color: var(--white);
+    text-align: center;
+}

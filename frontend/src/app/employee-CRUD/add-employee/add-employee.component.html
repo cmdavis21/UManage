@@ -1,0 +1,42 @@
+<div class="add-employee-field">
+  <div class="field-title">
+    <i class="fa-solid fa-user"></i>
+    <h3>Add a New Employee</h3>
+  </div>
+  <hr>
+  <form (submit)="submitEmployee()" id="add-employee">
+    <div class="mb-3">
+      <label for="name" class="form-label">Enter the employee's name:</label>
+      <input type="text" class="form-control" name="name" id="name" [(ngModel)]="name" required placeholder="John Doe">
+    </div>
+
+    <div class="mb-3">
+      <label for="phoneNumber" class="form-label">Enter the employee's phone number:</label>
+      <input type="text" class="form-control" name="phoneNumber" id="phoneNumber" [(ngModel)]="phoneNumber" required maxlength="10" placeholder="9045557346">
+    </div>
+
+    <div class="mb-3">
+      <label for="supervisors" class="form-label">Enter the employee's designated supervisors:</label>
+      <input type="text" class="form-control" name="supervisors" id="supervisors" [(ngModel)]="supervisors" required placeholder="Michael Park">
+    </div>
+
+    <button type="submit" class="btn btn-primary submit">Submit Employee</button>
+  </form>
+
+  <div class="message_box">
+    <div *ngIf="success" class="alert alert-success">{{ success }}</div>
+    <div *ngIf="error" class="alert alert-danger">{{ error }}</div>
+  </div>
+
+  <div class="display-new-employee">
+    <ng-container *ngIf="displayNewEmployee && displayNewEmployee.length > 0">
+      <div *ngFor="let employee of displayNewEmployee" class="new-employee-item">
+        <p>Employee Added!</p>
+        <p>ID: {{ employee.id }}</p>
+        <p>Name: {{ employee.name }}</p>
+        <p>Phone: {{ employee.phoneNumber }}</p>
+        <p>Supervisors: {{ employee.supervisors }}</p>
+      </div>
+    </ng-container>
+  </div>
+</div>

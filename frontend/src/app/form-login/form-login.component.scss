@@ -1,0 +1,45 @@
+.form__field {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 1fr);
+    padding: 0 2rem;
+    row-gap: 0.5rem;
+    justify-items: center;
+}
+
+form {
+    width: 95%;
+    height: 100%;
+    margin: 0.5rem auto;
+    text-align: center;
+    border-radius: 30px 0 30px 0;
+    box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 69rem) {
+    form {
+        width: 75%;
+    }
+}
+
+.input__field {
+    text-align: left;
+    font-size: 20px;
+    padding: 1.5rem;
+}
+
+.login__button {
+    width: 70%;
+    font-size: 15pt;
+    text-align: center;
+    margin-top: 1rem;
+    background-color: var(--purple);
+    border: none;
+    border-radius: 30px 0 30px 0;
+}
+
+.login__button:hover {
+    color: var(--purple);
+    background-color: var(--yellow);
+    transition: 600ms;
+}

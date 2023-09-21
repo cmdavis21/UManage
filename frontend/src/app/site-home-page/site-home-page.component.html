@@ -1,0 +1,57 @@
+<div>
+  <app-site-header></app-site-header>
+
+  <main>
+    <div class="faux-navbar">
+      <ul class="faux-links">
+        <li class="faux-item">Payroll</li>
+        <li class="faux-item active">Manage Employees</li>
+        <li class="faux-item">Scheduling</li>
+        <li class="faux-item">Messaging</li>
+        <li class="faux-item">Performance</li>
+        <li class="faux-item">Training</li>
+        <li class="faux-item">Announcements</li>
+      </ul>
+    </div>
+
+    <div class="employee-card">
+      <!-- Responsive navigation -->
+      <ul class="nav nav-tabs d-none d-lg-flex"> <!-- Hidden on small screens -->
+        <li class="nav-item">
+          <a class="nav-link" (click)="showTab('add')">Add Employee</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="showTab('view')">View Employees</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="showTab('update')">Update Employee</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="showTab('delete')">Delete Employee</a>
+        </li>
+      </ul>
+
+      <!-- Dropdown navigation (visible on small screens) -->
+      <div class="dropdown d-lg-none">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Menu
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" (click)="showTab('add')">Add Employee</a>
+          <a class="dropdown-item" (click)="showTab('view')">View Employees</a>
+          <a class="dropdown-item" (click)="showTab('update')">Update Employee</a>
+          <a class="dropdown-item" (click)="showTab('delete')">Delete Employee</a>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <app-add-employee *ngIf="activeTab === 'add'"></app-add-employee>
+        <app-view-employee *ngIf="activeTab === 'view'"></app-view-employee>
+        <app-update-employee *ngIf="activeTab === 'update'"></app-update-employee>
+        <app-delete-employee *ngIf="activeTab === 'delete'"></app-delete-employee>
+      </div>
+    </div>
+  </main>
+
+  <app-site-footer></app-site-footer>
+</div>

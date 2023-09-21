@@ -1,0 +1,21 @@
+<div class="delete-employee-field">
+  <div class="field-title">
+    <i class="fa-solid fa-user-slash"></i>
+    <h3>Remove an Employee</h3>
+  </div>
+  <hr>
+  <div class="message_box">
+    <div *ngIf="success" class="alert alert-success">{{ success }}</div>
+    <div *ngIf="error" class="alert alert-danger">{{ error }}</div>
+  </div>
+
+  <form (submit)="deleteEmployee()" id="delete-employee">
+    <label for="id" class="form-label">Enter the employee's id:</label>
+    <div class="submit-bar">
+      <input type="number" class="form-control" name="id" id="id" [(ngModel)]="id" required>
+      <button type="submit" class="btn btn-primary submit">Delete Employee</button>
+    </div>
+  </form>
+
+  <app-view-employee></app-view-employee>
+</div>
