@@ -1,10 +1,10 @@
-package com.cdavis.curapatientChallenge;
+package com.cdavis.umanage;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CurapatientChallengeApplicationTests {
+class umanageTests {
 
 	@Test
 	void contextLoads() {

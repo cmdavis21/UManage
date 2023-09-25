@@ -1,4 +1,4 @@
-package com.cdavis.curapatientChallenge;
+package com.cdavis.umanage;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
@@ -7,7 +7,7 @@ public class ServletInitializer extends SpringBootServletInitializer {
 
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-		return application.sources(CurapatientChallengeApplication.class);
+		return application.sources(Umanage.class);
 	}
 
 }

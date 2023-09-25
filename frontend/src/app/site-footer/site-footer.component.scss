@@ -1,15 +1,195 @@
+* {
+    outline: 2px solid blue;
+}
+
 footer {
     bottom: 0;
     left: 0;
     width: 100%;
-    position: fixed;
+    position: relative;
     z-index: 999;
-    padding: 3rem 2rem;
+    color: var(--white);
+    padding: 3rem 1rem 1rem;
     border-radius: 0 150px 0 0;
     background-color: var(--purple);
 }
 
-p {
-    color: var(--white);
-    text-align: center;
+.footer__bottom {
+    bottom: 0;
+    margin-top: 1.5rem;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer__content {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+    justify-content: center;
+
+    & h5 {
+        text-transform: uppercase;
+    }
+
+    & .footer__account ul, 
+    .footer__socials ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 1rem;
+        padding: 0;
+    }
+
+    & .footer__links, 
+    .footer__account, 
+    .footer__contact {
+        text-align: center;
+    }
+
+    & .footer__links ul li a, 
+    .footer__socials ul li a {
+        color: var(--white);
+        padding: 1rem;
+        text-align: center;
+        width: fit-content;
+    }
+
+    & .footer__links ul li a:hover, 
+    .footer__socials ul li a:hover {
+        color: var(--yellow);
+        border-radius: 15px;
+        box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.5);
+    }
+
+    & .footer__links {
+        grid-area: links;
+
+        & ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 300px);
+            justify-content: center;
+            gap: 4rem;
+            padding: 2rem 0;
+        }
+    }
+
+    & .footer__account {
+        grid-area: account;
+        
+        & ul li {
+            padding: 0.5rem;
+           
+            border-radius: 15px;
+            background-color: var(--yellow);
+            box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.5);
+
+            & a {
+                color: var(--purple);
+            }
+        }
+    }
+
+    & .footer__contact {
+        font-size: large;
+        grid-area: contact;
+
+        & a, p {
+            color: var(--yellow);
+        }
+
+        & span {
+            color: var(--white);
+        }
+    }
+
+    & .footer__socials {
+        grid-area: socials;
+
+        & ul {
+
+            & li a i {
+                color: var(--yellow);
+                font-size: 20px;
+            }
+        }
+    }
+    
+
+    & .footer__subscribe {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        grid-area: input;
+
+        & span, form i {
+            color: var(--yellow);
+        }
+
+       & form {
+            padding: 1rem 0.8rem;
+            width:max-content;
+            border-radius: 15px;
+            box-shadow: 0 2px 10px 5px rgba(0, 0, 0, 0.5);
+
+            & i {
+                font-size: larger;
+            }
+       }
+
+        & form input {
+            color: var(--white);
+            border: none;
+            border-bottom: 1px solid var(--yellow);
+            margin: 0 1rem;
+            padding: 0.2rem 0.2rem 0.2rem 1rem;
+            background-color: transparent;
+        }
+
+        & form input::-webkit-input-placeholder, 
+        form input::-moz-placeholder, 
+        form input::placeholder {
+            color: var(--yellow);
+        }
+
+        & form button  {
+            border: none;
+            color: var(--yellow);
+            padding: 0.5rem;
+            border-radius: 5px;
+            background-color: transparent;
+            box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.5);
+        }
+
+        & form button:hover {
+            color: var(--purple);
+            background-color: var(--yellow);
+        }
+    }
+
+}
+
+@media (min-width: 59rem) {
+    // .footer__content {
+    //     grid-template-columns: repeat(4, 1fr);
+        
+    // }
+
+    .footer__bottom {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+}
+
+
+@media (min-width: 69rem) {
+    .footer__content {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+        "input links account"
+        "socials links contact";
+    }
+
 }

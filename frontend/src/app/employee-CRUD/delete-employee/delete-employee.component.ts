@@ -1,11 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { AuthenticationService } from 'src/app/auth-service/authentication.service';
+import { AuthenticationService } from '../../auth-service/auth-service.service';
 
 @Component({
   selector: 'app-delete-employee',
   templateUrl: './delete-employee.component.html',
-  styleUrls: ['./delete-employee.component.css']
+  styleUrls: ['./delete-employee.component.scss']
 })
 export class DeleteEmployeeComponent {
 

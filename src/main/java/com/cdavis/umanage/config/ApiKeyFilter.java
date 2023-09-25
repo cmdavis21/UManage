@@ -1,4 +1,4 @@
-package com.cdavis.curapatientChallenge.config;
+package com.cdavis.umanage.config;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

@@ -10,6 +10,7 @@
 }
 
 .services__container {
+    margin: 2rem 0;
     grid-area: services;
 }
 
@@ -39,7 +40,7 @@
 
 .welcome-title {
     text-align: center;
-    padding: 3rem 0 4rem;
+    padding: 2rem 0 4rem;
 }
 
 .title {
@@ -60,6 +61,7 @@
     "login";
     row-gap: 1rem;
     margin-bottom: 3rem;
+    place-self: center;
     align-items: center;
     grid-area: login-section;
 }
@@ -89,10 +91,8 @@
         margin: 5rem;
 
     }
-    .service {
-        margin: 1rem 5rem;
-    }
     .login__section {
+        width:85%;
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas:
         "login animation";

@@ -1,4 +1,4 @@
-package com.cdavis.curapatientChallenge.employee;
+package com.cdavis.umanage.employee;
 
 import org.springframework.dao.DataAccessException;
 import org.springframework.dao.DataIntegrityViolationException;

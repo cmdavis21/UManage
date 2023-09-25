@@ -1,4 +1,4 @@
-package com.cdavis.curapatientChallenge.config;
+package com.cdavis.umanage.config;
 
 import java.security.SecureRandom;
 import java.util.Base64;

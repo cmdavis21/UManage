@@ -1,13 +1,13 @@
-package com.cdavis.curapatientChallenge;
+package com.cdavis.umanage;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CurapatientChallengeApplication {
+public class Umanage {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CurapatientChallengeApplication.class, args);
+		SpringApplication.run(Umanage.class, args);
 	}
 
 }

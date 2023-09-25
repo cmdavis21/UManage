@@ -1,11 +1,11 @@
 import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { AuthenticationService } from 'src/app/auth-service/authentication.service';
+import { AuthenticationService } from '../../auth-service/auth-service.service';
 
 @Component({
   selector: 'app-add-employee',
   templateUrl: './add-employee.component.html',
-  styleUrls: ['./add-employee.component.css']
+  styleUrls: ['./add-employee.component.scss']
 })
 export class AddEmployeeComponent {
 

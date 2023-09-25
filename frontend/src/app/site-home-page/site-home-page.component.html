@@ -2,33 +2,29 @@
   <app-site-header></app-site-header>
 
   <main>
-    <div class="faux-navbar">
-      <ul class="faux-links">
-        <li class="faux-item">Payroll</li>
-        <li class="faux-item active">Manage Employees</li>
-        <li class="faux-item">Scheduling</li>
-        <li class="faux-item">Messaging</li>
-        <li class="faux-item">Performance</li>
-        <li class="faux-item">Training</li>
-        <li class="faux-item">Announcements</li>
+    <div class="navbar" id="navbar">
+      <ul class="navbar__links">
+        <li class="navbar__item">Payroll</li>
+        <li class="navbar__item active">Manage Employees</li>
+        <li class="navbar__item">Scheduling</li>
+        <li class="navbar__item">Messaging</li>
+        <li class="navbar__item">Performance</li>
+        <li class="navbar__item">Training</li>
+        <li class="navbar__item">Announcements</li>
       </ul>
     </div>
 
+    <div class="mobile-nav-togglers">
+      <i class="fa-solid fa-bars" id="navbar__btn"></i>
+      <i class="fa-regular fa-rectangle-xmark" id="navbar__close"></i>
+    </div>
+
     <div class="employee-card">
-      <!-- Responsive navigation -->
       <ul class="nav nav-tabs d-none d-lg-flex"> <!-- Hidden on small screens -->
-        <li class="nav-item">
-          <a class="nav-link" (click)="showTab('add')">Add Employee</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" (click)="showTab('view')">View Employees</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" (click)="showTab('update')">Update Employee</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" (click)="showTab('delete')">Delete Employee</a>
-        </li>
+        <li class="nav-item"><a class="nav-link" (click)="showTab('add')">Add Employee</a></li>
+        <li class="nav-item"><a class="nav-link" (click)="showTab('view')">View Employees</a></li>
+        <li class="nav-item"><a class="nav-link" (click)="showTab('update')">Update Employee</a></li>
+        <li class="nav-item"><a class="nav-link" (click)="showTab('delete')">Delete Employee</a></li>
       </ul>
 
       <!-- Dropdown navigation (visible on small screens) -->

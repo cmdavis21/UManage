@@ -25,6 +25,8 @@ html, body {
 
 body {
     line-height: 1.5;
+    background-image: url("./assets/images/site-bg.png");
+    background-repeat: repeat;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -38,6 +40,14 @@ img, picture, video, canvas, svg {
 
 input, button, textarea, select {
     font: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
 }
 
 /* informational messages */

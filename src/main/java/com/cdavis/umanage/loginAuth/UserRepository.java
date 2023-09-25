@@ -1,4 +1,4 @@
-package com.cdavis.curapatientChallenge.loginAuth;
+package com.cdavis.umanage.loginAuth;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

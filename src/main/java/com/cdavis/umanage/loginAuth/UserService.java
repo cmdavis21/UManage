@@ -1,4 +1,4 @@
-package com.cdavis.curapatientChallenge.loginAuth;
+package com.cdavis.umanage.loginAuth;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

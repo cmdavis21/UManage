@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { AuthenticationService } from '../auth-service/authentication.service';
+import { AuthenticationService } from '../auth-service/auth-service.service';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form-login',
   templateUrl: './form-login.component.html',
-  styleUrls: ['./form-login.component.css']
+  styleUrls: ['./form-login.component.scss']
 })
 export class FormLoginComponent {
   username: string = '';

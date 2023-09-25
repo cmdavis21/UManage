@@ -1,4 +1,4 @@
-package com.cdavis.curapatientChallenge.employee;
+package com.cdavis.umanage.employee;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

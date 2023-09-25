@@ -1,4 +1,4 @@
-package com.cdavis.curapatientChallenge.config;
+package com.cdavis.umanage.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

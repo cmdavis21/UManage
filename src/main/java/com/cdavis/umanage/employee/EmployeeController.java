@@ -1,4 +1,4 @@
-package com.cdavis.curapatientChallenge.employee;
+package com.cdavis.umanage.employee;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
