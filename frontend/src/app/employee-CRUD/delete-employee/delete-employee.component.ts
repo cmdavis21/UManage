@@ -28,7 +28,7 @@ export class DeleteEmployeeComponent {
       }, (error) => {
         console.error("Error deleting employee", error);
         this.success = null;
-        this.error = "Error deleting employee. Please try again."
+        // this.error = "Error deleting employee. Please try again."
       }
     )
   }
