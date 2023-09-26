@@ -24,8 +24,7 @@ A full-stack web application for efficient employee data management using CRUD o
 
 ## Future Work
 
-- Resolve CORS configuration issues for smoother API communication.
-- Implement frontend user authentication.
+- Optimize frontend responsive layouts.
 - Enhance the user interface and add more features for a complete employee management system.
 
 ## Screenshots
