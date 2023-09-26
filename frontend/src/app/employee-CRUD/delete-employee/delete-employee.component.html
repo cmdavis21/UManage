@@ -3,7 +3,9 @@
     <i class="fa-solid fa-user-slash"></i>
     <h3>Remove an Employee</h3>
   </div>
-  <hr>
+ 
+  <app-search-employee></app-search-employee>
+  
   <div class="message_box">
     <div *ngIf="success" class="alert alert-success">{{ success }}</div>
     <div *ngIf="error" class="alert alert-danger">{{ error }}</div>
@@ -16,6 +18,4 @@
       <button type="submit" class="btn btn-primary submit">Delete Employee</button>
     </div>
   </form>
-
-  <app-view-employee></app-view-employee>
 </div>

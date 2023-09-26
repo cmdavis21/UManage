@@ -35,33 +35,6 @@ export class UpdateEmployeeComponent {
     });
   }
 
-  searchEmployees() {
-    this.authService.get('employee/search?query=' + this.searchQuery).subscribe(
-      (response) => {
-        const employee = response as any;
-
-        if (employee) {
-          console.log("Employee found:", employee);
-          // this.name = employee.name;
-          // this.phoneNumber = employee.phoneNumber;
-          // this.supervisors = employee.supervisors;
-          // this.success = "Employee found";
-          this.foundEmployees = response;
-
-        } else {
-          console.error("Error searching for employee: Employee not found");
-          this.success = null;
-          this.error = "Employee not found. Please try again.";
-        }
-      },
-      (error) => {
-        console.error("Error searching for employee", error);
-        this.success = null;
-        this.error = "Error searching for employee. Please try again.";
-      }
-    );
-  }
-
   updateEmployee() {
     if (this.employeeId === null) {
       console.error("Employee ID is missing.");
@@ -84,8 +57,8 @@ export class UpdateEmployeeComponent {
       },
       (error) => {
         console.error("Error updating employee", error);
-        this.success = null;
-        this.error = "Error updating employee. Please try again.";
+        // this.success = null;
+        // this.error = "Error updating employee. Please try again.";
       }
     );
   }

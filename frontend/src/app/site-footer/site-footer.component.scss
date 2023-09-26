@@ -1,7 +1,3 @@
-* {
-    outline: 2px solid blue;
-}
-
 footer {
     bottom: 0;
     left: 0;
@@ -11,7 +7,7 @@ footer {
     position: relative;
     z-index: 999;
     color: var(--white);
-    padding: 3rem 1rem 1rem;
+    padding: 3rem 2rem 1rem;
     border-radius: 0 150px 0 0;
     background-color: var(--purple);
 }
@@ -29,23 +25,20 @@ footer {
     display: grid;
     gap: 2rem;
     grid-template-columns: 1fr;
+    grid-template-areas: 
+    "links"
+    "contact"
+    "socials"
+    "input";
     justify-content: center;
+    // align-items: center;
+    padding: 0;
 
     & h5 {
         text-transform: uppercase;
     }
 
-    & .footer__account ul, 
-    .footer__socials ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        gap: 1rem;
-        padding: 0;
-    }
-
     & .footer__links, 
-    .footer__account, 
     .footer__contact {
         text-align: center;
     }
@@ -55,14 +48,10 @@ footer {
         color: var(--white);
         padding: 1rem;
         text-align: center;
-        width: fit-content;
-    }
-
-    & .footer__links ul li a:hover, 
-    .footer__socials ul li a:hover {
-        color: var(--yellow);
-        border-radius: 15px;
-        box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.5);
+        // width: fit-content;
+        border-radius: 5px;
+        text-decoration: none;
+        box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
     }
 
     & .footer__links {
@@ -70,25 +59,14 @@ footer {
 
         & ul {
             display: grid;
-            grid-template-columns: repeat(auto-fill, 300px);
+            grid-template-columns: repeat(auto-fit, 150px);
             justify-content: center;
-            gap: 4rem;
+            row-gap: 4rem;
             padding: 2rem 0;
-        }
-    }
 
-    & .footer__account {
-        grid-area: account;
-        
-        & ul li {
-            padding: 0.5rem;
-           
-            border-radius: 15px;
-            background-color: var(--yellow);
-            box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.5);
-
-            & a {
+            & li a:hover {
                 color: var(--purple);
+                background-color: var(--yellow);
             }
         }
     }
@@ -96,6 +74,10 @@ footer {
     & .footer__contact {
         font-size: large;
         grid-area: contact;
+
+        & div {
+            margin: auto 0;
+        }
 
         & a, p {
             color: var(--yellow);
@@ -110,6 +92,11 @@ footer {
         grid-area: socials;
 
         & ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 1rem;
+            padding: 0;
 
             & li a i {
                 color: var(--yellow);
@@ -118,7 +105,6 @@ footer {
         }
     }
     
-
     & .footer__subscribe {
         display: flex;
         flex-direction: column;
@@ -131,8 +117,11 @@ footer {
         }
 
        & form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             padding: 1rem 0.8rem;
-            width:max-content;
+            width: fit-content;
             border-radius: 15px;
             box-shadow: 0 2px 10px 5px rgba(0, 0, 0, 0.5);
 
@@ -144,9 +133,10 @@ footer {
         & form input {
             color: var(--white);
             border: none;
+            width: 50%;
             border-bottom: 1px solid var(--yellow);
             margin: 0 1rem;
-            padding: 0.2rem 0.2rem 0.2rem 1rem;
+            padding: 0.2rem;
             background-color: transparent;
         }
 
@@ -170,28 +160,28 @@ footer {
             background-color: var(--yellow);
         }
     }
-
 }
 
-@media (min-width: 59rem) {
-    // .footer__content {
-    //     grid-template-columns: repeat(4, 1fr);
-        
-    // }
-
+@media (min-width: 36rem) {
     .footer__bottom {
         flex-wrap: nowrap;
         justify-content: space-between;
     }
 }
 
-
-@media (min-width: 69rem) {
+@media (min-width: 59rem) {
     .footer__content {
         grid-template-columns: repeat(3, 1fr);
         grid-template-areas: 
-        "input links account"
-        "socials links contact";
+        "input links contact"
+        "input links socials";
+        row-gap: 1rem;
     }
+    .footer__subscribe {
+        width: max-content;
 
+        & form input {
+            width: 100%;
+        }
+    }
 }

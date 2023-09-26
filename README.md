@@ -30,8 +30,5 @@ A full-stack web application for efficient employee data management using CRUD o
 
 ## Screenshots
 
-![Screenshot 1](./screenshots/umanage_login_desktop.png)
-![Screenshot 2](./screenshots/umanage_desktop.png)
-![Screenshot 3](./screenshots/umanage_login_mobile.png)
-![Screenshot 4](./screenshots/umanage_mobile.png)
-![Screenshot 5](./screenshots/umanage_mobile_2.png)
+![Screenshot 1](./screenshots/login.png)
+![Screenshot 2](./screenshots/home_page.png)

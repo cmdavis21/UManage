@@ -20,6 +20,7 @@ import { AuthenticationService } from './auth-service/auth-service.service';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { SearchEmployeeComponent } from './employee-CRUD/search-employee/search-employee.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     AddEmployeeComponent,
     DeleteEmployeeComponent,
     UpdateEmployeeComponent,
-    ViewEmployeeComponent
+    ViewEmployeeComponent,
+    SearchEmployeeComponent
   ],
   imports: [
     BrowserModule,

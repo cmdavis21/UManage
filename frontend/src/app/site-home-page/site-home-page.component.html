@@ -14,10 +14,11 @@
       </ul>
     </div>
 
-    <div class="mobile-nav-togglers">
-      <i class="fa-solid fa-bars" id="navbar__btn"></i>
-      <i class="fa-regular fa-rectangle-xmark" id="navbar__close"></i>
+    <div class="mobile-nav-togglers" [ngClass]="{'hidden': !isMobile}">
+      <i class="fa-solid fa-bars navbar__btn" #navbarBtn (click)="toggleMenu()" [style.display]="!isMenuOpen ? 'block' : 'none'"></i>
+      <i class="fa-regular fa-rectangle-xmark navbar__close" #navbarClose (click)="toggleMenu()" [style.display]="isMenuOpen ? 'block' : 'none'"></i>
     </div>
+      
 
     <div class="employee-card">
       <ul class="nav nav-tabs d-none d-lg-flex"> <!-- Hidden on small screens -->

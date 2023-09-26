@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-site-home-page',
@@ -7,36 +7,42 @@ import { Component } from '@angular/core';
 })
 export class SiteHomePageComponent {
   activeTab: string = 'add';
+  isMobile: boolean = true; // Default to mobile
 
   showTab(tabName: string) {
     this.activeTab = tabName;
   }
 
-  // mobile navigation properties
+  // MOBILE NAVIGATION MENU/BUTTON TOGGLING
   private navbar: HTMLElement | null = null;
-  private navLinks: HTMLElement | null = null;
-  private navBtn: HTMLElement | null = null;
-  private navClose: HTMLElement | null = null;
+  @ViewChild('navbarBtn') navbarBtn!: ElementRef;
+  @ViewChild('navbarClose') navbarClose!: ElementRef;
+  isMenuOpen = false;
 
-  ngOnIt(): void {
+  ngOnInit(): void {
     this.navbar = document.getElementById("navbar");
-    this.navLinks = document.querySelector(".navbar__links");
-    this.navBtn = document.getElementById("navbar__btn");
-    this.navClose = document.getElementById("navbar__close");
-
-    // mobile navbar event listeners
-    if (this.navBtn && this.navClose) {
-      this.navBtn.addEventListener("click", this.toggleMenu.bind(this));
-      this.navClose.addEventListener("click", this.toggleMenu.bind(this));
-    }
+    
+   // Initial check for screen width
+   this.checkScreenWidth(window.innerWidth);
   }
 
   // function to toggle the menu visibility
   toggleMenu() {
-    if (this.navbar && this.navBtn && this.navClose) {
-      this.navbar.classList.toggle("show-menu");
-      this.navBtn.classList.toggle("hide-icon");
-      this.navClose.classList.toggle("show-icon");
+    if (this.navbar) {
+        this.isMenuOpen = !this.isMenuOpen;
+        if (this.isMenuOpen) {
+            this.navbar.classList.add("show-menu");
+            this.navbar.classList.remove("close-menu");
+        } else {
+            this.navbar.classList.add("close-menu");
+            this.navbar.classList.remove("show-menu");
+        }
     }
+  }
+
+  // Function to check screen width and update isMobile
+  checkScreenWidth(width: number) {
+    // Update isMobile based on the screen width
+    this.isMobile = width < 944; // Adjust the breakpoint as needed
   }
 }

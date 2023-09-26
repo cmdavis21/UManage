@@ -69,7 +69,6 @@ public class EmployeeService {
 
     // PUT / UPDATE an employee information
     public void updateEmployee(int id, Employee updateEmployee) {
-        validateEmployee(updateEmployee);
 
         Optional<Employee> existingEmployeeOptional = employeeRepository.findById(id);
 
@@ -79,6 +78,8 @@ public class EmployeeService {
             existingEmployee.setName(updateEmployee.getName());
             existingEmployee.setPhoneNumber(updateEmployee.getPhoneNumber());
             existingEmployee.setSupervisors(updateEmployee.getSupervisors());
+            
+            employeeRepository.save(existingEmployee);
 
         } else {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Employee with id " + id + " was not found");

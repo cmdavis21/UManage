@@ -29,24 +29,19 @@ export class AddEmployeeComponent {
     // make HTTP POST request to add employee
     this.authService.post('employee/add', newEmployee).subscribe(
       (response: HttpResponse<any>) => {
-        console.log("Employee added response:", response);
+        console.log("Employee added successfully", response);
+        this.success = "Employee successfully added";   
+        this.error = null;
 
-        if (response.status === 200 || response.status === 201) {
-          console.log("Employee added successfully", response);
-          this.success = "Employee successfully added";
-          this.displayNewEmployee = response.body;
-          this.error = null;
-
-          //reset form fields
-          this.name = '';
-          this.phoneNumber = '';
-          this.supervisors = '';
-        }
+        //reset form fields
+        this.name = '';
+        this.phoneNumber = '';
+        this.supervisors = '';
       },
       (error) => {
         console.error("Error adding employee", error);
-        this.success = null;
-        this.error = "Error adding employee. Please try again."
+        // this.success = null;
+        // this.error = "Error adding employee. Please try again."
       }
     );
   }

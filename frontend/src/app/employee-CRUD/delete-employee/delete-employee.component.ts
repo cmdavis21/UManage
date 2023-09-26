@@ -27,7 +27,7 @@ export class DeleteEmployeeComponent {
         this.id = NaN;
       }, (error) => {
         console.error("Error deleting employee", error);
-        this.success = null;
+        // this.success = null;
         // this.error = "Error deleting employee. Please try again."
       }
     )
